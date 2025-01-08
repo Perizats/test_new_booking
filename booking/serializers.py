@@ -75,7 +75,7 @@ class FavoriteHotelSerializers(serializers.ModelSerializer):
     hotel = HotelListSerializers(many=True, read_only=True)
     class Meta:
         model = FavoriteHotel
-        fields = ['favorite', 'hotel', 'selected']
+        fields = ['favorite', 'myhotel', 'selected']
 
 
 class BookingSerializers(serializers.ModelSerializer):
@@ -97,7 +97,7 @@ class HistorySerializers(serializers.ModelSerializer):
 
     class Meta:
         model = History
-        fields = ['user', 'hotel', 'booking', 'total_price']
+        fields = ['user', 'myhotel', 'booking', 'total_price']
 
 
 class BookSerializer(serializers.ModelSerializer):
